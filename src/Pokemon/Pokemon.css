@@ -1,0 +1,32 @@
+.columns{
+    display: flex;
+    justify-content: space-around;
+}
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+ 
+  }
+  .App2 {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    float: left !important;
+    margin-left: 1rem;
+    margin-top: 0rem;
+  }
+  .App3 {
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: right !important;
+    margin-right: 37rem;
+    font-size: 12px;
+    max-width: 100%;
+  }
+  
+  
+

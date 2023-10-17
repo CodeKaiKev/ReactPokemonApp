@@ -1,0 +1,33 @@
+.flex-container {
+    display: flex;
+    justify-content: center;
+    margin: auto !important;
+  }
+  .flex-container > div {
+    /* background-color: #f1f1f1;
+    width: 500px;
+    margin: 400px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px; */
+  }
+  .position {
+    margin: auto !important;
+    
+  }
+  .imgSize {
+    max-height: 20rem;
+  }
+  Card {
+    
+    margin: auto
+  }
+  
+
+  @media  screen and (max-width: 800px) {
+    Card {
+        width: 10rem;
+    }
+      
+  }
+ 
