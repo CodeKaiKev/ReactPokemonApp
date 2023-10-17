@@ -9,7 +9,7 @@ import {
     MDBRipple
   } from 'mdb-react-ui-kit';
 
-function SearchPCard ({pokemonUrl}) { 
+function SearchPCard2 ({pokemonUrl}) { 
     let [pokemon, setPokemon] = useState([]);
     let [loaded, setLoaded] = useState(false);
     
@@ -35,6 +35,12 @@ function SearchPCard ({pokemonUrl}) {
             <MDBCard>
             <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
                 <MDBCardImage src={pokemon.sprites.front_default} fluid alt='...' />
+                <MDBCardImage src={pokemon.sprites.back_default} fluid alt='...' />
+                <a>
+                <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
+                </a>
+                <MDBCardImage src={pokemon.sprites.front_shiny} fluid alt='...' />
+                <MDBCardImage src={pokemon.sprites.back_shiny} fluid alt='...' />
                 <a>
                 <div className='mask' style={{ backgroundColor: 'rgba(251, 251, 251, 0.15)' }}></div>
                 </a>
@@ -43,7 +49,6 @@ function SearchPCard ({pokemonUrl}) {
                 <MDBCardTitle>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1).toLowerCase()}</MDBCardTitle>
                 <MDBCardText>
                 </MDBCardText>
-                <MDBBtn href='#'>Info</MDBBtn>
             </MDBCardBody>
             </MDBCard>
             </> : 
@@ -52,4 +57,4 @@ function SearchPCard ({pokemonUrl}) {
     )
 }
 
-export default SearchPCard;
+export default SearchPCard2;

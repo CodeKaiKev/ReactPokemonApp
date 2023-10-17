@@ -46,7 +46,7 @@ export const SearchBar = ({items}) => {
                 }
                 //console.log(items);
             })*/items.filter(getFilterFn()).map((pokemon, index) => {
-                console.log("Checking: " + pokemon.url);
+                // console.log("Checking: " + pokemon.url);
                 return (
                     <Col key={index} >
                         <SearchPCard pokemonUrl={pokemon.url}/>

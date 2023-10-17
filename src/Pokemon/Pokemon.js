@@ -9,22 +9,24 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import { SearchBar } from "../SearchBar";
 import SearchPCard from "../SearchPCard/SearchPCard";
+import SearchPCard2 from "../SearchPCard2/SearchPCard2";
 
 
 
-function Pokemon  (){
-    const [pokemons, setPokemons] = useState([]);
+function Pokemon  ({pokemonGeneration}){
+    let [pokemons, setPokemons] = useState([]);
     //const [pokemonsCopy, setPokemonsCopy] = useState([]);
-    const [loaded, setLoaded] = useState(false);
- 
-
+    let [loaded, setLoaded] = useState(false);
+    //const [pokemonGeneration, setPokemonGeneration] = useState('https://pokeapi.co/api/v2/pokemon?limit=151');
+    console.log(pokemonGeneration);
     
-    const pokeUrl = 'https://pokeapi.co/api/v2/pokemon?limit=151'
+    //let pokeUrl = pokemonGeneration;
     useEffect(() => {
-        fetch(pokeUrl)
+        fetch(pokemonGeneration)
             .then((response) => response.json())
             .then((data) => {
-                //console.log(data.results);
+                console.log(pokemonGeneration + "Hiasdsd");
+                console.log(data.results);
                 setPokemons(data.results); 
                 
                 setTimeout(() =>{
@@ -40,13 +42,14 @@ function Pokemon  (){
  
     if (loaded) {
     return (
-        <>
+        <>      
+                
                 {/* <div> */}
                     <div>
-                        <Carousel data-bs-theme="dark" >  
+                        <Carousel data-bs-theme="dark" autoPlay={true} interval={1000} controls={false} indicators={false}  >  
                         {pokemons.map((pokemon) => 
                             <Carousel.Item  >
-                               <SearchPCard pokemonUrl={pokemon.url}></SearchPCard>
+                               <SearchPCard2 pokemonUrl={pokemon.url}></SearchPCard2>
                             </Carousel.Item>
                         )}
                         </Carousel>

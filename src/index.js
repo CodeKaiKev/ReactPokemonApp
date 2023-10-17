@@ -5,7 +5,6 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Phone from './Testing/Phone';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import Header2 from './Header/Header2.js';
 //const myFirstElement = <h1>Hello React!</h1>
 //const root = ReactDOM.createRoot(document.getElementById('root'));
 //root.render(myFirstElement);
@@ -14,7 +13,6 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //root.render(<App />);
 root.render(
   <React.StrictMode>
-    <Header2/>
     <App />
   </React.StrictMode>
 );

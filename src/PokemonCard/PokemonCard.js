@@ -4,7 +4,7 @@ import Card from 'react-bootstrap/Card';
 import Pokeball from "../Pokeball/Pokeball";
 import Carousel from 'react-bootstrap/Carousel';
 import Spinner from '../Spinner/Spinner';
-import  './PokemonCard.css';
+//import  './PokemonCard.css';
  function PokemonCard ({pokemonUrl}) {
     const [pokemon, setPokemon] = useState([]);
     const [loaded, setLoaded] = useState(false);
