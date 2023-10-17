@@ -22,7 +22,8 @@ function Pokemon  ({pokemonGeneration}){
     
     //let pokeUrl = pokemonGeneration;
     useEffect(() => {
-        fetch(pokemonGeneration)
+        const fetchData = async () => {
+            await fetch(pokemonGeneration)
             .then((response) => response.json())
             .then((data) => {
                 console.log(pokemonGeneration + "Hiasdsd");
@@ -38,8 +39,11 @@ function Pokemon  ({pokemonGeneration}){
             .catch((error) => {
                 console.error(error);
             });
-    },[]);
- 
+        }
+        fetchData();
+    },[pokemonGeneration]);
+
+    
     if (loaded) {
     return (
         <>      
