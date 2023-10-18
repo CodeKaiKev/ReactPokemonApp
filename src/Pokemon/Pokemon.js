@@ -13,7 +13,7 @@ import SearchPCard2 from "../SearchPCard2/SearchPCard2";
 
 
 
-function Pokemon  ({pokemonGeneration}){
+function Pokemon  ({pokemonGeneration, location}){
     let [pokemons, setPokemons] = useState([]);
     //const [pokemonsCopy, setPokemonsCopy] = useState([]);
     let [loaded, setLoaded] = useState(false);
@@ -26,7 +26,7 @@ function Pokemon  ({pokemonGeneration}){
             await fetch(pokemonGeneration)
             .then((response) => response.json())
             .then((data) => {
-                console.log(pokemonGeneration + "Hiasdsd");
+                //console.log(pokemonGeneration + "Hiasdsd");
                 console.log(data.results);
                 setPokemons(data.results); 
                 
@@ -49,11 +49,12 @@ function Pokemon  ({pokemonGeneration}){
         <>      
                 
                 {/* <div> */}
+                    <br/>
                     <div>
-                        <Carousel data-bs-theme="dark" autoPlay={true} interval={1000} controls={false} indicators={false}  >  
+                        <Carousel style={{paddingLeft: "5%", paddingRight: "5%"}} autoPlay={true} interval={1000} controls={false} indicators={false}  >  
                         {pokemons.map((pokemon) => 
-                            <Carousel.Item  >
-                               <SearchPCard2 pokemonUrl={pokemon.url}></SearchPCard2>
+                            <Carousel.Item className="square border border-warning">
+                               <SearchPCard2 pokemonUrl={pokemon.url} ></SearchPCard2>
                             </Carousel.Item>
                         )}
                         </Carousel>
@@ -61,7 +62,7 @@ function Pokemon  ({pokemonGeneration}){
 
                     <div  >
                         <div>
-                            <SearchBar items={pokemons} />
+                            <SearchBar items={pokemons} location={location} />
                         </div>
                     </div>
                     {/* <div>

@@ -8,7 +8,7 @@ import {
     MDBBtn,
     MDBRipple
   } from 'mdb-react-ui-kit';
-
+import Spinner from "../Spinner/Spinner";
 function SearchPCard ({pokemonUrl}) { 
     let [pokemon, setPokemon] = useState([]);
     let [loaded, setLoaded] = useState(false);
@@ -47,7 +47,9 @@ function SearchPCard ({pokemonUrl}) {
             </MDBCardBody>
             </MDBCard>
             </> : 
-            <> </> }
+            <> 
+            <Spinner/>
+            </> }
         </>
     )
 }
