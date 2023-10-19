@@ -24,7 +24,7 @@ export const SearchBar = ({items, location, showMore, setShowMore}) => {
         return chunks;
     }
 
-    const chunks = chunkArray(items, 3);
+    const chunks = chunkArray(items, 4);
 
     const handleChange = (e) => {
         e.preventDefault();

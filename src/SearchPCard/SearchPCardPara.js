@@ -38,14 +38,9 @@ function SearchPCardPara ({pokeUrl})  {
             // }
             return (
                 <> 
-                 {/* {loaded ? <>
-                    <Card.Text>{pokemonSpecies.flavor_text_entries[0].flavor_text}</Card.Text>
-                 </> : <>
-                 <Card.Text><Card.Text/>
-                 </>} */}
 
                  {loaded ? 
-                 <><Card.Text>{flavor_text}</Card.Text> </> : 
+                 <><Card.Text class="hide">{flavor_text}</Card.Text> </> : 
                  <><Placeholder as={Card.Text} animation="glow">
                  <Placeholder xs={7} /> <Placeholder xs={4} /> <Placeholder xs={4} />{' '}
                  <Placeholder xs={6} /> <Placeholder xs={8} />
