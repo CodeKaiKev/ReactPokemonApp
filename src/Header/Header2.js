@@ -6,7 +6,7 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import './Header2.css';
-function Header2 ({setWhichPage, setBackG,setState}) {
+function Header2 ({setWhichPage, setBackG,setCardColour}) {
   return (
     <div className="p-3 mb-2 bg-danger text-white">
       {[false].map((expand) => (
@@ -52,7 +52,7 @@ function Header2 ({setWhichPage, setBackG,setState}) {
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action7" onClick={() => {setWhichPage('Gen6');setBackG(`https://archives.bulbagarden.net/media/upload/8/8a/Kalos_alt.png`)}}>Generation VI - Kalos</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action8" onClick={() => {setWhichPage('Gen7'); setBackG(`https://archives.bulbagarden.net/media/upload/0/0b/Alola_USUM_artwork.png`)}}>Generation VII - Alola</NavDropdown.Item>
+                    <NavDropdown.Item href="#action8" onClick={() => {setWhichPage('Gen7'); setBackG(`https://static.wikia.nocookie.net/pokemon/images/6/6c/Alola.png/revision/latest?cb=20161123041126`)}}>Generation VII - Alola</NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action9" onClick={() => {setWhichPage('Gen8'); setBackG(`https://archives.bulbagarden.net/media/upload/c/ce/Galar_artwork.png`)}}>Generation VIII - Galar</NavDropdown.Item>
                     <NavDropdown.Divider />
@@ -62,8 +62,21 @@ function Header2 ({setWhichPage, setBackG,setState}) {
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action11" onClick={() => setWhichPage('Refresh')}>Refresh</NavDropdown.Item>
                   </NavDropdown>
-                  <Nav.Link href="#action12" onClick={() => setState('light')}>Light Mode</Nav.Link>
-                  <Nav.Link href="#action12" onClick={() => setState('dark')}>Dark Mode</Nav.Link>
+
+                  <NavDropdown
+                    title="Colour Options"
+                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                  >
+                    <NavDropdown.Item href="#action2" onClick={() => {setCardColour(["dark", "warning", "light"])}}>Dark</NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action2" onClick={() => {setCardColour(["light", "dark", "dark"])}}>Light</NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action2" onClick={() => {setCardColour(["info", "warning", "light"])}}>Blue</NavDropdown.Item>
+                    <NavDropdown.Divider />
+                    <NavDropdown.Item href="#action2" onClick={() => {setCardColour(["success", "info", "light"])}}>Green</NavDropdown.Item>
+                  </NavDropdown>
+                  {/* <Nav.Link href="#action12" onClick={() => setState('light')}>Light Mode</Nav.Link>
+                  <Nav.Link href="#action12" onClick={() => setState('dark')}>Dark Mode</Nav.Link> */}
                 </Nav>
                 {/* <Form className="d-flex">
                   <Form.Control

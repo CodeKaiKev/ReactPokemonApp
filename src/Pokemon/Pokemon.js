@@ -13,7 +13,7 @@ import SearchPCard2 from "../SearchPCard2/SearchPCard2";
 
 
 
-function Pokemon  ({pokemonGeneration, location}){
+function Pokemon  ({pokemonGeneration, location, cardColour}){
     let [pokemons, setPokemons] = useState([]);
     //const [pokemonsCopy, setPokemonsCopy] = useState([]);
     let [loaded, setLoaded] = useState(false);
@@ -54,7 +54,7 @@ function Pokemon  ({pokemonGeneration, location}){
                     <div>
                         <Carousel style={{paddingLeft: "5%", paddingRight: "5%"}} autoPlay={true} interval={1000} controls={false} indicators={false}  >  
                         {pokemons.map((pokemon) => 
-                            <Carousel.Item className="square border border-warning">
+                            <Carousel.Item className="square border border-warning" bg={"info"}>
                                <SearchPCard2 pokemonUrl={pokemon.url} ></SearchPCard2>
                             </Carousel.Item>
                         )}
@@ -63,7 +63,7 @@ function Pokemon  ({pokemonGeneration, location}){
 
                     <div  >
                         <div>
-                            <SearchBar items={pokemons} location={location} showMore={showMore} setShowMore={setShowMore}/>
+                            <SearchBar items={pokemons} location={location} showMore={showMore} setShowMore={setShowMore} cardColour={cardColour}/>
                         </div>
                     </div>
                     {/* <div>

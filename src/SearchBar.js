@@ -7,7 +7,8 @@ import Button from 'react-bootstrap/Button';
 import logoPoke from './LogosPoke/logoPoke.png';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
-export const SearchBar = ({items, location, showMore, setShowMore}) => {
+// import { PageHeader } from 'antd';
+export const SearchBar = ({items, location, showMore, setShowMore, cardColour}) => {
     //console.log("SearchBar", items);
     const [query, setQuery] = useState('');
     //const [ showMore, setShowMore ] = useState(false);
@@ -49,7 +50,7 @@ export const SearchBar = ({items, location, showMore, setShowMore}) => {
         <>
             
             <br></br>
-            <h1 style={{color: "white", textAlign: "center"}}><span style={{backgroundColor: "goldenrod"}}>   {location} Pokedex   </span></h1> 
+            <h2 style={{color: "white", textAlign: "center", fontFamily: "red serif", fontSize: "50px"}}><span style={{backgroundColor: ""}}>   {location} Pokedex   </span></h2> 
             <br></br>
             {/* <input placeholder="Search Pokemon..." onChange={event => setQuery(event.target.value)} /> */}
             <InputGroup size="lg" style={{width: "50%", textAlign: "center", margin : "auto"}}>
@@ -79,7 +80,7 @@ export const SearchBar = ({items, location, showMore, setShowMore}) => {
                             }
                         }).map(pokemon2 => (
                                     <Col key={pokemon2.name} style={{paddingBottom: '2%'}}>
-                                        <SearchPCard pokemonUrl={pokemon2.url} className="square border border-success"/>
+                                        <SearchPCard pokemonUrl={pokemon2.url} cardColour= {cardColour} className="square border border-success"/>
                                     </Col>
                         ))}
                     </Row>
