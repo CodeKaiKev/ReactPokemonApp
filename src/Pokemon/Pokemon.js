@@ -17,6 +17,7 @@ function Pokemon  ({pokemonGeneration, location}){
     let [pokemons, setPokemons] = useState([]);
     //const [pokemonsCopy, setPokemonsCopy] = useState([]);
     let [loaded, setLoaded] = useState(false);
+    const [ showMore, setShowMore ] = useState(false);
     //const [pokemonGeneration, setPokemonGeneration] = useState('https://pokeapi.co/api/v2/pokemon?limit=151');
     console.log(pokemonGeneration);
     
@@ -33,7 +34,7 @@ function Pokemon  ({pokemonGeneration, location}){
                 setTimeout(() =>{
                     setLoaded(true);
                 }, 2000);
-                
+                setShowMore(false);
                 //console.log("Hi" + pokemons);
             })
             .catch((error) => {
@@ -62,7 +63,7 @@ function Pokemon  ({pokemonGeneration, location}){
 
                     <div  >
                         <div>
-                            <SearchBar items={pokemons} location={location} />
+                            <SearchBar items={pokemons} location={location} showMore={showMore} setShowMore={setShowMore}/>
                         </div>
                     </div>
                     {/* <div>
@@ -79,7 +80,29 @@ function Pokemon  ({pokemonGeneration, location}){
                     </div> */}
                     
                 {/* </div>     */}
-                
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+                <br></br>
+               
             
         </>
     )}  else {

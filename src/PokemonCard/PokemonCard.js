@@ -22,7 +22,7 @@ import Spinner from '../Spinner/Spinner';
         } catch(error) {
             console.error(error)
         }
-    }, []);
+    }, [pokemonUrl]);
 
 
     

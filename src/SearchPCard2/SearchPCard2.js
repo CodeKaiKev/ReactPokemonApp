@@ -26,7 +26,7 @@ function SearchPCard2 ({pokemonUrl}) {
         } catch(error) {
             console.error(error)
         }
-    }, []);
+    }, [pokemonUrl]);
 
     return (
         <>

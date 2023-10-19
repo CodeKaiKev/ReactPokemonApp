@@ -4,6 +4,7 @@ import Header2 from './Header/Header2.js';
 import Pokemon from './Pokemon/Pokemon.js';
 import React, {useState, useEffect} from "react";
 import Pokeball from './Pokeball/Pokeball';
+import Footer  from './Footer/Footer';
 function App() {
   //const [pokemonGeneration, setPokemonGeneration] = useState('https://pokeapi.co/api/v2/pokemon?limit=151');
   const [whichPage, setWhichPage] = useState('Gen1');
@@ -13,7 +14,7 @@ function App() {
   return (
     <>
     <Header2 setWhichPage = {setWhichPage} setBackG = {setBackG} setState= {setState}/>
-    <div className="App" style={{backgroundImage:`url(${backG})`}} data-bs-theme={state}>
+    <div className="App" style={{backgroundImage:`url(${backG})`, backgroundSize: "1071px 757px"}} data-bs-theme={state}>
       {(() => {
           switch (whichPage) {
             case 'Gen1': 
@@ -37,7 +38,7 @@ function App() {
               return <Pokemon pokemonGeneration ={'https://pokeapi.co/api/v2/pokemon?offset=493&limit=156'} location={'Unova'}/>
             case 'Gen6': 
               console.log("Gen6");
-              return <Pokemon pokemonGeneration ={'https://pokeapi.co/api/v2/pokemon?offset=659&limit=72'} location={'Kalos'}/>
+              return <Pokemon pokemonGeneration ={'https://pokeapi.co/api/v2/pokemon?offset=649&limit=72'} location={'Kalos'}/>
             case 'Gen7': 
               console.log("Gen7");
               return <Pokemon pokemonGeneration ={'https://pokeapi.co/api/v2/pokemon?offset=721&limit=88'} location={'Alola'}/>
@@ -57,6 +58,7 @@ function App() {
       }
       }) ()}
     </div>
+    <Footer/>
     </>
   );
 }

@@ -13,7 +13,7 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //root.render(<App />);
 root.render(
   <React.StrictMode>
-    <App />
+    <App className="indexApp"/>
   </React.StrictMode>
 );
 

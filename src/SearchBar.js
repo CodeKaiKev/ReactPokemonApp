@@ -3,9 +3,14 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import SearchPCard from './SearchPCard/SearchPCard';
-export const SearchBar = ({items, location}) => {
+import Button from 'react-bootstrap/Button';
+import logoPoke from './LogosPoke/logoPoke.png';
+import Form from 'react-bootstrap/Form';
+import InputGroup from 'react-bootstrap/InputGroup';
+export const SearchBar = ({items, location, showMore, setShowMore}) => {
     //console.log("SearchBar", items);
     const [query, setQuery] = useState('');
+    //const [ showMore, setShowMore ] = useState(false);
     //const [pokemons, setPokemons] = useState([]);
     //setPokemons(items);
     function chunkArray(array, size = 1) {
@@ -19,7 +24,7 @@ export const SearchBar = ({items, location}) => {
         return chunks;
     }
 
-    const chunks = chunkArray(items, 6);
+    const chunks = chunkArray(items, 3);
 
     const handleChange = (e) => {
         e.preventDefault();
@@ -44,30 +49,78 @@ export const SearchBar = ({items, location}) => {
         <>
             
             <br></br>
-            <h1 style={{color: "white"}}>{location} Pokedex</h1> 
+            <h1 style={{color: "white", textAlign: "center"}}><span style={{backgroundColor: "goldenrod"}}>   {location} Pokedex   </span></h1> 
             <br></br>
-            <input placeholder="Search Pokemon..." onChange={event => setQuery(event.target.value)} />
+            {/* <input placeholder="Search Pokemon..." onChange={event => setQuery(event.target.value)} /> */}
+            <InputGroup size="lg" style={{width: "50%", textAlign: "center", margin : "auto"}}>
+                <Form.Control
+                aria-label="Large"
+                aria-describedby="inputGroup-sizing-sm" placeholder="Search Pokemon..." onChange={event => setQuery(event.target.value)}
+                />
+            </InputGroup>
             <br></br>
             <br></br>
             <br></br>
             <Container>
-                {chunks.filter(getFilterFn()).map((chunk, index) => (
+                {chunks?.slice(0,3).map((chunk, idx) => (
                     <>
-                    <Row key={index}>
-                        {chunk.map(pokemon => (
-                            <Col key={index} >
-                                <SearchPCard pokemonUrl={pokemon.url} className="square border border-success"/>
-                            </Col>
+                    <Row key={idx}>
+                        {chunk.filter(pokemon => {
+                            // if (query == '') {
+                            //     console.log(pokemon);
+                            //     return pokemon;
+                            // } else if ((pokemon.name.toLowerCase()).startsWith(query.toLowerCase())) {
+                            //     return pokemon;
+                            // } 
+                            if((pokemon.name.toLowerCase()).startsWith(query.toLowerCase())) {
+                                return pokemon;
+                            } else if(query == '') {
+                                return pokemon;
+                            }
+                        }).map(pokemon2 => (
+                                    <Col key={pokemon2.name} style={{paddingBottom: '2%'}}>
+                                        <SearchPCard pokemonUrl={pokemon2.url} className="square border border-success"/>
+                                    </Col>
                         ))}
-                        <br></br>
                     </Row>
-                    <br></br>
                     </>
                 ))}
+                {showMore && chunks?.slice(3).map((chunk, idx) => (
+                    <>
+                    <Row key={idx}>
+                        {chunk.filter(pokemon => {
+                            // if (query == '') {
+                            //     console.log(pokemon);
+                            //     return pokemon;
+                            // } else if ((pokemon.name.toLowerCase()).startsWith(query.toLowerCase())) {
+                            //     return pokemon;
+                            // } 
+                            if((pokemon.name.toLowerCase()).startsWith(query.toLowerCase())) {
+                                return pokemon;
+                            } else if(query == '') {
+                                return pokemon;
+                            }
+                        }).map(pokemon2 => (
+                                    <Col key={pokemon2.name} style={{paddingBottom: '2%'}}>
+                                        <SearchPCard pokemonUrl={pokemon2.url} className="square border border-success"/>
+                                    </Col>
+                        ))}
+                    </Row>
+                    </>
+                ))}
+                <br></br>
+                <Button type="button" variant="outline-danger" onClick={() => setShowMore(true)} style={{visibility: !(showMore) ? 'visible' : 'hidden' , width: "20%"}} size="lg" >Load More... <img src={logoPoke} style={{width: "10%"}}/></Button>
+                <br></br>
             </Container>
             {/* <Container>
             <Row>
-                {items.filter(getFilterFn()).map((pokemon, index) => {
+                {items.filter(pokemon => {
+                    if (query == '') {
+                        return pokemon;
+                    } else if (pokemon.name.toLowerCase().startsWith(query.toLowerCase())) {
+                        return pokemon;
+                    }
+                }).map((pokemon, index) => {
                     return (
                             <Col key={index} >
                                 <SearchPCard pokemonUrl={pokemon.url} className="square border border-success"/>
@@ -76,6 +129,7 @@ export const SearchBar = ({items, location}) => {
                 })}
             </Row>
             <br></br>
+
             </Container> */}
         </>
       )
