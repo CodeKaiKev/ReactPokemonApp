@@ -27,11 +27,11 @@
         float: right;
       }
       .imgTitle {
-        max-width: 30%;
+        max-width: 10rem;
         display:block;
         margin:0 auto;
         float: none;
-        margin-bottom: -2rem;
+        margin-bottom: -1rem;
       }
       /*img {max-width: 40%;display:block;margin:0 auto;}*/
       
