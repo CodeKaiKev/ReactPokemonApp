@@ -41,40 +41,40 @@ function Header2 ({setWhichPage, setBackG, setCardColour}) {
                     title="Pokemon Generations"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#action2" onClick={() => {setWhichPage('Gen1'); setBackG(`https://archives.bulbagarden.net/media/upload/2/25/LGPE_Kanto_Map.png`)}}>Generation I - Kanto</NavDropdown.Item>
+                    <NavDropdown.Item  onClick={() => {setWhichPage('Gen1'); setBackG(`https://archives.bulbagarden.net/media/upload/2/25/LGPE_Kanto_Map.png`)}}>Generation I - Kanto</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action3" onClick={() => {setWhichPage('Gen2'); setBackG(`https://archives.bulbagarden.net/media/upload/6/64/JohtoMap.png`)}}>Generation II - Johto</NavDropdown.Item>
+                    <NavDropdown.Item  onClick={() => {setWhichPage('Gen2'); setBackG(`https://archives.bulbagarden.net/media/upload/6/64/JohtoMap.png`)}}>Generation II - Johto</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action4" onClick={() => {setWhichPage('Gen3'); setBackG(`https://archives.bulbagarden.net/media/upload/8/85/Hoenn_ORAS.png`)}}>Generation III - Hoenn</NavDropdown.Item>
+                    <NavDropdown.Item  onClick={() => {setWhichPage('Gen3'); setBackG(`https://archives.bulbagarden.net/media/upload/8/85/Hoenn_ORAS.png`)}}>Generation III - Hoenn</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action5" onClick={() => {setWhichPage('Gen4'); setBackG(`https://archives.bulbagarden.net/media/upload/0/08/Sinnoh_BDSP_artwork.png`)}}>Generation IV - Sinnoh</NavDropdown.Item>
+                    <NavDropdown.Item  onClick={() => {setWhichPage('Gen4'); setBackG(`https://archives.bulbagarden.net/media/upload/0/08/Sinnoh_BDSP_artwork.png`)}}>Generation IV - Sinnoh</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action6" onClick={() => {setWhichPage('Gen5'); setBackG(`https://archives.bulbagarden.net/media/upload/f/fc/Unova_B2W2_alt.png`)}}>Generation V - Unova</NavDropdown.Item>
+                    <NavDropdown.Item  onClick={() => {setWhichPage('Gen5'); setBackG(`https://archives.bulbagarden.net/media/upload/f/fc/Unova_B2W2_alt.png`)}}>Generation V - Unova</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action7" onClick={() => {setWhichPage('Gen6');setBackG(`https://archives.bulbagarden.net/media/upload/8/8a/Kalos_alt.png`)}}>Generation VI - Kalos</NavDropdown.Item>
+                    <NavDropdown.Item  onClick={() => {setWhichPage('Gen6');setBackG(`https://archives.bulbagarden.net/media/upload/8/8a/Kalos_alt.png`)}}>Generation VI - Kalos</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action8" onClick={() => {setWhichPage('Gen7'); setBackG(`https://archives.bulbagarden.net/media/upload/thumb/0/0b/Alola_USUM_artwork.png/1200px-Alola_USUM_artwork.png`)}}>Generation VII - Alola</NavDropdown.Item>
+                    <NavDropdown.Item  onClick={() => {setWhichPage('Gen7'); setBackG(`https://archives.bulbagarden.net/media/upload/thumb/0/0b/Alola_USUM_artwork.png/1200px-Alola_USUM_artwork.png`)}}>Generation VII - Alola</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action9" onClick={() => {setWhichPage('Gen8'); setBackG(`https://archives.bulbagarden.net/media/upload/c/ce/Galar_artwork.png`)}}>Generation VIII - Galar</NavDropdown.Item>
+                    <NavDropdown.Item  onClick={() => {setWhichPage('Gen8'); setBackG(`https://archives.bulbagarden.net/media/upload/c/ce/Galar_artwork.png`)}}>Generation VIII - Galar</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action9" onClick={() => {setWhichPage('Hisui'); setBackG(`https://archives.bulbagarden.net/media/upload/2/22/Legends_Arceus_Hisui.png`)}}>Generation VIII - Hisui</NavDropdown.Item>
+                    <NavDropdown.Item  onClick={() => {setWhichPage('Hisui'); setBackG(`https://archives.bulbagarden.net/media/upload/2/22/Legends_Arceus_Hisui.png`)}}>Generation VIII - Hisui</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action10" onClick={() => {setWhichPage('Gen9'); setBackG(`https://archives.bulbagarden.net/media/upload/f/fd/Paldea_artwork.png`)}}>Generation IX - Paldea</NavDropdown.Item>
+                    <NavDropdown.Item  onClick={() => {setWhichPage('Gen9'); setBackG(`https://archives.bulbagarden.net/media/upload/f/fd/Paldea_artwork.png`)}}>Generation IX - Paldea</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action11" onClick={() => setWhichPage('Refresh')}>Refresh</NavDropdown.Item>
+                    <NavDropdown.Item  onClick={() => setWhichPage('Refresh')}>Refresh</NavDropdown.Item>
                   </NavDropdown>
 
                   <NavDropdown
                     title="Colour Options"
                     id={`offcanvasNavbarDropdown-expand-${expand}`}
                   >
-                    <NavDropdown.Item href="#action2" onClick={() => {setCardColour(["dark", "warning", "light"])}}>Dark</NavDropdown.Item>
+                    <NavDropdown.Item  onClick={() => {setCardColour(["dark", "warning", "light"])}}>Dark</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action2" onClick={() => {setCardColour(["light", "dark", "dark"])}}>Light</NavDropdown.Item>
+                    <NavDropdown.Item  onClick={() => {setCardColour(["light", "dark", "dark"])}}>Light</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action2" onClick={() => {setCardColour(["info", "warning", "light"])}}>Blue</NavDropdown.Item>
+                    <NavDropdown.Item  onClick={() => {setCardColour(["info", "warning", "light"])}}>Blue</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action2" onClick={() => {setCardColour(["success", "info", "light"])}}>Green</NavDropdown.Item>
+                    <NavDropdown.Item  onClick={() => {setCardColour(["success", "info", "light"])}}>Green</NavDropdown.Item>
                   </NavDropdown>
                   {/* <Nav.Link href="#action12" onClick={() => setState('light')}>Light Mode</Nav.Link>
                   <Nav.Link href="#action12" onClick={() => setState('dark')}>Dark Mode</Nav.Link> */}
