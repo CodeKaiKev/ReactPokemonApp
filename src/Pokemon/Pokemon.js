@@ -19,7 +19,7 @@ function Pokemon  ({pokemonGeneration, location, cardColour}){
     let [loaded, setLoaded] = useState(false);
     const [ showMore, setShowMore ] = useState(false);
     //const [pokemonGeneration, setPokemonGeneration] = useState('https://pokeapi.co/api/v2/pokemon?limit=151');
-    console.log(pokemonGeneration);
+    //console.log(pokemonGeneration);
     
     //let pokeUrl = pokemonGeneration;
     useEffect(() => {
@@ -28,7 +28,7 @@ function Pokemon  ({pokemonGeneration, location, cardColour}){
             .then((response) => response.json())
             .then((data) => {
                 //console.log(pokemonGeneration + "Hiasdsd");
-                console.log(data.results);
+                //console.log(data.results);
                 setPokemons(data.results); 
                 
                 setTimeout(() =>{

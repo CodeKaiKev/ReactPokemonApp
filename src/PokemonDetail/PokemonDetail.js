@@ -21,12 +21,12 @@ const PokemonDetail = () => {
     if(location.state != null) {
         for (let x of location.state.check.stats) {
             totalX = totalX + x.base_stat;
-            console.log(totalX);
+            //console.log(totalX);
         }
     }
     
     //console.log(location);
-    console.log(pokemon);
+    //console.log(pokemon);
     return (
         <>
             <Header setWhichPage={setWhichPage} setBackG={setBackG} setCardColour={setCardColour}/>
