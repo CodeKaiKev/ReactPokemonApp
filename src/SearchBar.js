@@ -103,14 +103,14 @@ export const SearchBar = ({items, location, showMore, setShowMore, cardColour}) 
                             }
                         }).map(pokemon2 => (
                                     <Col key={pokemon2.name} style={{paddingBottom: '2%'}}>
-                                        <SearchPCard pokemonUrl={pokemon2.url} className="square border border-success"/>
+                                        <SearchPCard pokemonUrl={pokemon2.url} cardColour= {cardColour} className="square border border-success"/>
                                     </Col>
                         ))}
                     </Row>
                     </>
                 ))}
                 <br></br>
-                <Button type="button" variant="outline-danger" onClick={() => setShowMore(true)} style={{visibility: !(showMore) ? 'visible' : 'hidden' , width: "20%"}} size="lg" >Load More... <img src={logoPoke} style={{width: "10%"}}/></Button>
+                <Button type="button" variant="outline-danger" onClick={() => setShowMore(true)} style={{visibility: !(showMore) ? 'visible' : 'hidden' , width: "20%"}} size="lg" >Load More   <img src={logoPoke} style={{width: "1.5rem"}}/></Button>
                 <br></br>
             </Container>
             {/* <Container>

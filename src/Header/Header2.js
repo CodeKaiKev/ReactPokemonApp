@@ -6,7 +6,8 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import './Header2.css';
-function Header2 ({setWhichPage, setBackG,setCardColour}) {
+import { Routes, Route, Link } from 'react-router-dom';
+function Header2 ({setWhichPage, setBackG, setCardColour}) {
   return (
     <div className="p-3 mb-2 bg-danger text-white">
       {[false].map((expand) => (
@@ -34,7 +35,7 @@ function Header2 ({setWhichPage, setBackG,setCardColour}) {
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action1">Home</Nav.Link>
+                  <Nav.Link href="#action1"><Link to="/">Home</Link></Nav.Link>
                   {/* <Nav.Link href="#action2">Link</Nav.Link> */}
                   <NavDropdown
                     title="Pokemon Generations"
@@ -52,7 +53,7 @@ function Header2 ({setWhichPage, setBackG,setCardColour}) {
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action7" onClick={() => {setWhichPage('Gen6');setBackG(`https://archives.bulbagarden.net/media/upload/8/8a/Kalos_alt.png`)}}>Generation VI - Kalos</NavDropdown.Item>
                     <NavDropdown.Divider />
-                    <NavDropdown.Item href="#action8" onClick={() => {setWhichPage('Gen7'); setBackG(`https://static.wikia.nocookie.net/pokemon/images/6/6c/Alola.png/revision/latest?cb=20161123041126`)}}>Generation VII - Alola</NavDropdown.Item>
+                    <NavDropdown.Item href="#action8" onClick={() => {setWhichPage('Gen7'); setBackG(`https://archives.bulbagarden.net/media/upload/thumb/0/0b/Alola_USUM_artwork.png/1200px-Alola_USUM_artwork.png`)}}>Generation VII - Alola</NavDropdown.Item>
                     <NavDropdown.Divider />
                     <NavDropdown.Item href="#action9" onClick={() => {setWhichPage('Gen8'); setBackG(`https://archives.bulbagarden.net/media/upload/c/ce/Galar_artwork.png`)}}>Generation VIII - Galar</NavDropdown.Item>
                     <NavDropdown.Divider />

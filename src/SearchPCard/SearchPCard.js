@@ -14,6 +14,8 @@ import Card from 'react-bootstrap/Card';
 import Placeholder from 'react-bootstrap/Placeholder';
 import logoPoke from '../LogosPoke/logoPoke.png';
 import SearchPCardPara from "./SearchPCardPara";
+import './SearchPCard.css';
+import { Routes, Route, Link } from 'react-router-dom';
 
 function SearchPCard ({pokemonUrl, cardColour}) { 
     const [pokemon, setPokemon] = useState([]);
@@ -23,7 +25,7 @@ function SearchPCard ({pokemonUrl, cardColour}) {
     const onHover = (e) => {
         e.preventDefault();
         setHover(true);
-        console.log("hovered");
+        //console.log("hovered");
       };
     
       const onHoverOver = (e) => {
@@ -46,7 +48,7 @@ function SearchPCard ({pokemonUrl, cardColour}) {
         }
     }, [pokemonUrl]);
     if (pokemon) {
-        console.log(pokemon.name);
+        //console.log(pokemon.name);
     };
     // if (loaded) {
     //     useEffect(() => {
@@ -66,7 +68,7 @@ function SearchPCard ({pokemonUrl, cardColour}) {
     //     }, []);
     // }
        
-    console.log(cardColour);
+    //console.log(cardColour);
     return (
         <>
         {loaded ? 
@@ -87,14 +89,14 @@ function SearchPCard ({pokemonUrl, cardColour}) {
             </MDBCard> */}
             
             <div className="d-flex justify-content-around">
-            <Card style={{ width: '18rem' }} onMouseEnter={(e) => onHover(e)} onMouseLeave={(e) => onHoverOver(e)} bg={cardColour[0]} border={cardColour[1]} text={cardColour[2]}>
-                {pokemon.sprites.front_default ? <Card.Img variant="top" src={pokemon.sprites.front_default} /> : <Card.Img variant="top" src="holder.js/100px180" />}
+            <Card class="card" style={{ width: '18rem'}} onMouseEnter={(e) => onHover(e)} onMouseLeave={(e) => onHoverOver(e)} bg={cardColour[0]} border={cardColour[1]} text={cardColour[2]}>
+                {loaded ? <Card.Img variant="top" src={pokemon.sprites.front_default} /> : <Card.Img variant="top" src="holder.js/100px180" />}
                 <Card.Body>
-                <Card.Title>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1).toLowerCase()}</Card.Title>
+                <Card.Title style={{ fontFamily: "'Times New Roman', serif", fontSize: "30px" }}>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1).toLowerCase()}</Card.Title>
                 {hover && <SearchPCardPara pokeUrl={pokemon.species.url}/>}
                 <br></br>
                 {/* <Card.Text>{pokemonSpecies.flavor_text_entries[0].flavor_text}</Card.Text> */}
-                <Button variant={`outline-${cardColour[1]}`} size="small" style={{width: "25%"}}><img src={logoPoke} style={{width: "100%"}}/></Button>
+                <Button variant={`outline-${cardColour[1]}`} size="small" style={{width: "25%"}}><Link to={'/view'} state={{check: pokemon}}><img src={logoPoke} style={{width: "100%"}}/></Link></Button>
                 </Card.Body>
                 <br></br>
             </Card>

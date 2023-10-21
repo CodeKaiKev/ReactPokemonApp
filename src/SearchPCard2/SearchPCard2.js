@@ -33,7 +33,7 @@ function SearchPCard2 ({pokemonUrl}) {
         {loaded ? 
         <>
             <MDBCard>
-            <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay'>
+            <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay' >
                 <MDBCardImage src={pokemon.sprites.front_default} fluid alt='...' />
                 <MDBCardImage src={pokemon.sprites.back_default} fluid alt='...' />
                 <a>
@@ -46,7 +46,7 @@ function SearchPCard2 ({pokemonUrl}) {
                 </a>
             </MDBRipple>
             <MDBCardBody>
-                <MDBCardTitle>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1).toLowerCase()}</MDBCardTitle>
+                <MDBCardTitle style={{fontFamily: "Fantasy", fontSize: "30px"}}>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1).toLowerCase()}</MDBCardTitle>
                 <MDBCardText>
                 </MDBCardText>
             </MDBCardBody>

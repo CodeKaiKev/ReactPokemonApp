@@ -15,7 +15,7 @@ function SearchPCardPara ({pokeUrl})  {
                             //console.log(data);
                             setLoaded(true);
                             for(let x of data.flavor_text_entries) {
-                                console.log(x);
+                                //console.log(x);
                                 if(x.language.name == "en") {
                                     setFlavorText(x.flavor_text);
                                 }
@@ -40,7 +40,7 @@ function SearchPCardPara ({pokeUrl})  {
                 <> 
 
                  {loaded ? 
-                 <><Card.Text class="hide">{flavor_text}</Card.Text> </> : 
+                 <><Card.Text class="hide" style={{fontFamily: "Cursive", fontSize: "15px"}}>{flavor_text}</Card.Text> </> : 
                  <><Placeholder as={Card.Text} animation="glow">
                  <Placeholder xs={7} /> <Placeholder xs={4} /> <Placeholder xs={4} />{' '}
                  <Placeholder xs={6} /> <Placeholder xs={8} />
