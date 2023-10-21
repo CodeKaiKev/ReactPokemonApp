@@ -13,7 +13,7 @@ function App() {
   const [cardColour, setCardColour] = useState(["dark", "warning", "light"]);
   return (
     <>
-    <Header2 setWhichPage = {setWhichPage} setBackG = {setBackG} setCardColour= {setCardColour}/>
+    <Header2 setWhichPage = {setWhichPage} setBackG = {setBackG} setCardColour= {setCardColour} className="Head"/>
     <div className="App" style={{backgroundImage:`url(${backG})`, backgroundSize: "1071px 757px"}} data-bs-theme={state}>
       {(() => {
           switch (whichPage) {
