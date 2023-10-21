@@ -40,7 +40,7 @@ function SearchPCardPara ({pokeUrl})  {
                 <> 
 
                  {loaded ? 
-                 <><Card.Text class="hide" style={{fontFamily: "Cursive", fontSize: "15px"}}>{flavor_text}</Card.Text> </> : 
+                 <><Card.Text class="hide" style={{fontFamily: "initial", fontSize: "20px"}}>{flavor_text}</Card.Text> </> : 
                  <><Placeholder as={Card.Text} animation="glow">
                  <Placeholder xs={7} /> <Placeholder xs={4} /> <Placeholder xs={4} />{' '}
                  <Placeholder xs={6} /> <Placeholder xs={8} />
