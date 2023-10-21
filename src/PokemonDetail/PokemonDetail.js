@@ -102,7 +102,7 @@ const PokemonDetail = () => {
                             
                             {pokemon.check.abilities.map((ability, idx) => 
                                     // setTotal(total + stat.base_stat)
-                                    <Card.Text ><strong>{ability.ability.name.charAt(0).toUpperCase() + ability.ability.name.slice(1).toLowerCase()}:</strong> <PokeAbility pokeUrl={ability.ability.url}/></Card.Text>
+                                    <Card.Text Key={idx}><strong>{ability.ability.name.charAt(0).toUpperCase() + ability.ability.name.slice(1).toLowerCase()}:</strong> <PokeAbility pokeUrl={ability.ability.url}/></Card.Text>
                             )}
                            
                         </Card>
@@ -114,7 +114,7 @@ const PokemonDetail = () => {
                             
                             {pokemon.check.stats.map((stat, idx) => 
                                     // setTotal(total + stat.base_stat)
-                                    <Card.Text ><strong>{stat.stat.name.charAt(0).toUpperCase() + stat.stat.name.slice(1).toLowerCase()}</strong>: {stat.base_stat}</Card.Text>
+                                    <Card.Text Key={idx}><strong>{stat.stat.name.charAt(0).toUpperCase() + stat.stat.name.slice(1).toLowerCase()}</strong>: {stat.base_stat}</Card.Text>
                             )}
                             <Card.Text><strong><u>Base Stat Total: {totalX} </u></strong></Card.Text>
                         </Card>

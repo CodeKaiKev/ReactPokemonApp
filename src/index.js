@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import Phone from './Testing/Phone';
 import PokemonDetail from './PokemonDetail/PokemonDetail';
-import {BrowserRouter, Routes, Route } from 'react-router-dom';
+import {BrowserRouter, Routes, Route, HashRouter } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 //const myFirstElement = <h1>Hello React!</h1>
@@ -16,12 +16,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 //root.render(<App />);
 root.render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
     <Routes>
       <Route path="/" element={<App className="indexApp" />}/>
       <Route path="/view" element={<PokemonDetail />}/>
     </Routes>
-    </BrowserRouter>
+    </HashRouter>
     {/* <App className="indexApp"/> */}
   </React.StrictMode>
 );
