@@ -53,7 +53,7 @@ export const SearchBar = ({items, location, showMore, setShowMore, cardColour}) 
             <h2 style={{color: "white", textAlign: "center", fontFamily: "red serif", fontSize: "50px"}}><span style={{backgroundColor: ""}}>   {location} Pokedex   </span></h2> 
             <br></br>
             {/* <input placeholder="Search Pokemon..." onChange={event => setQuery(event.target.value)} /> */}
-            <InputGroup size="lg" style={{width: "50%", textAlign: "center", margin : "auto"}}>
+            <InputGroup size="lg" style={{width: "80%", textAlign: "center", margin : "auto"}}>
                 <Form.Control
                 aria-label="Large"
                 aria-describedby="inputGroup-sizing-sm" placeholder="Search Pokemon..." onChange={event => setQuery(event.target.value)}
