@@ -97,7 +97,7 @@ const PokemonDetail = () => {
                     <br/>
                     {/* <Button variant="warning"><Link to="/">Return Back</Link></Button> */}
                 </Card.Body>
-                <Card bg="success" text={cardColour[2]} style={{ marginLeft: "10%", marginRight: "10%",  paddingTop: "0.5rem", paddingBottom: "0.5rem"}}>
+                <Card bg="warning" text={cardColour[0]} style={{ marginLeft: "10%", marginRight: "10%",  paddingTop: "0.5rem", paddingBottom: "0.5rem"}}>
                         <Card.Title  style={{fontFamily: "'NCL Aekabih Muskey', sans-serif", fontSize: "1.4rem", padding: "0.3rem"}}>Abilities:</Card.Title>
                         <Card bg="dark" text="light" style={{ marginLeft: "1rem", marginRight: "1rem", paddingBottom: "1rem",  paddingTop: "1rem", marginBottom: "1rem", fontFamily: "monospace"}}>
                             
@@ -109,7 +109,7 @@ const PokemonDetail = () => {
                         </Card>
                 </Card>
                 <br></br>
-                <Card bg="success" text={cardColour[2]} style={{ marginLeft: "10%", marginRight: "10%",  paddingTop: "0.5rem", paddingBottom: "0.5rem"}}>
+                <Card bg="warning" text={cardColour[0]} style={{ marginLeft: "10%", marginRight: "10%",  paddingTop: "0.5rem", paddingBottom: "0.5rem"}}>
                         <Card.Title style={{fontFamily: "'NCL Aekabih Muskey', sans-serif", fontSize: "1.4rem", padding: "0.3rem"}}>Base Stats:</Card.Title>
                         <Card bg="dark" text="light" style={{ marginLeft: "1rem", marginRight: "1rem", paddingBottom: "1rem",  paddingTop: "1rem", marginBottom: "1rem", fontFamily: "monospace"}}>
                             
