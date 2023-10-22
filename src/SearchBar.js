@@ -110,7 +110,7 @@ export const SearchBar = ({items, location, showMore, setShowMore, cardColour}) 
                     </>
                 ))}
                 <br></br>
-                <Button type="button" variant="outline-danger" onClick={() => setShowMore(true)} style={{visibility: !(showMore) ? 'visible' : 'hidden' , width: "20%"}} size="lg" >Load More   <img src={logoPoke} style={{width: "1.5rem"}}/></Button>
+                <Button type="button" variant="danger" onClick={() => setShowMore(true)} style={{visibility: !(showMore) ? 'visible' : 'hidden' , width: "30%"}} size="lg" >Load More   <img src={logoPoke} style={{width: "1.5rem"}}/></Button>
                 <br></br>
             </Container>
             {/* <Container>

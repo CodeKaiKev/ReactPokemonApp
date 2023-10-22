@@ -9,7 +9,7 @@ import './Header2.css';
 import { Routes, Route, Link } from 'react-router-dom';
 function Header ({setWhichPage, setBackG, setCardColour}) {
   return (
-    <div className="p-3 mb-2 bg-danger text-white">
+    <div className="p-3  bg-danger text-white">
       {[false].map((expand) => (
         <Navbar key={expand} expand={expand} >
           <Container fluid>

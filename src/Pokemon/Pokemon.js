@@ -108,7 +108,7 @@ function Pokemon  ({pokemonGeneration, location, cardColour}){
     )}  else {
         return (
             <>
-                <Pokeball/>
+                <Pokeball style={{position: "fixed"}}/>
             </>
         )
     }}

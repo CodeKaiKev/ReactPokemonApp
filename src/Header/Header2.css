@@ -3,12 +3,12 @@
     background-color: gold;
 }
   .imgTitle {
-    max-width: 25%;
+    max-width: 15rem;
     display:block;
     margin:0 auto;
     float: none;
-    margin-bottom: -3%; 
-    margin-top: -1%;
+    margin-bottom: -2rem; 
+    margin-top: 0%;
   }
   .centerBrand {
     float: left;
@@ -20,18 +20,22 @@
 
 
  
-  @media  screen and (max-width: 800px) {
+  @media  screen and (max-width: 832px) {
     .expandThing {
         display:block;
         margin:0 auto;
         float: right;
+        /* margin-bottom: -1rem; */
+        margin-left: 80%;
+        /* position: end; */
+        margin-top: -2.8rem;
       }
       .imgTitle {
         max-width: 10rem;
         display:block;
         margin:0 auto;
         float: none;
-        margin-bottom: -1rem;
+        margin-bottom: -2rem;
       }
       /*img {max-width: 40%;display:block;margin:0 auto;}*/
       
