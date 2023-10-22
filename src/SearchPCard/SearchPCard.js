@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import '../SearchBar.css';
 import {
     MDBCard,
     MDBCardBody,
@@ -92,7 +93,8 @@ function SearchPCard ({pokemonUrl, cardColour}) {
             <Card class="card" style={{ width: '18rem'}} onMouseEnter={(e) => onHover(e)} onMouseLeave={(e) => onHoverOver(e)} bg={cardColour[0]} border={cardColour[1]} text={cardColour[2]}>
                 {loaded ? <Card.Img variant="top" src={pokemon.sprites.front_default} /> : <Card.Img variant="top" src="holder.js/100px180" />}
                 <Card.Body>
-                <Card.Title style={{ fontFamily: "'Times New Roman', serif", fontSize: "30px" }}>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1).toLowerCase()}</Card.Title>
+                <Card.Title style={{ fontFamily: "'Pokemon Solid', sans-serif", fontSize: "30px", color: "gold" }}>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1).toLowerCase()}</Card.Title>
+                <br></br>
                 {hover && <SearchPCardPara pokeUrl={pokemon.species.url}/>}
                 <br></br>
                 {/* <Card.Text>{pokemonSpecies.flavor_text_entries[0].flavor_text}</Card.Text> */}

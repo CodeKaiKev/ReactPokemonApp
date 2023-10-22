@@ -7,6 +7,7 @@ import Button from 'react-bootstrap/Button';
 import logoPoke from './LogosPoke/logoPoke.png';
 import Form from 'react-bootstrap/Form';
 import InputGroup from 'react-bootstrap/InputGroup';
+import './SearchBar.css';
 // import { PageHeader } from 'antd';
 export const SearchBar = ({items, location, showMore, setShowMore, cardColour}) => {
     //console.log("SearchBar", items);
@@ -50,17 +51,19 @@ export const SearchBar = ({items, location, showMore, setShowMore, cardColour}) 
         <>
             
             <br></br>
-            <h2 style={{color: "white", textAlign: "center", fontFamily: "fantasy", fontSize: "50px"}}><span style={{backgroundColor: "red"}}>   {location} Pokedex   </span></h2> 
+            <br></br>
+            {/* <h2 style={{color: "yellow", textAlign: "center", fontFamily: "'Pokemon Solid', sans-serif", fontSize: "50PX"}}><span style={{backgroundColor: ""}}>   {location} Pokedex   </span></h2>  */}
+            <h2 style={{color: "white", textAlign: "center", fontFamily: "'Platinum Hub Caps', sans-serif", width: "100%"}}><span style={{backgroundColor: "black", opacity: "0.9", borderRadius: "25px", padding: "1rem"}}> {location} Pokedex</span></h2> 
+            {/* <a href="https://fontmeme.com/pokemon-font/"><img src="https://fontmeme.com/permalink/231022/ee1daf6ab5b6c5c75fb6c4c78c2cccaf.png" alt="pokemon-font" border="0"/></a> */}
             <br></br>
             {/* <input placeholder="Search Pokemon..." onChange={event => setQuery(event.target.value)} /> */}
-            <InputGroup size="lg" style={{width: "80%", textAlign: "center", margin : "auto"}}>
+            <InputGroup size="lg" style={{width: "80%", textAlign: "center", margin : "auto", fontFamily:"'Platinum Hub Caps', sans-serif"}}>
                 <Form.Control
                 aria-label="Large"
-                aria-describedby="inputGroup-sizing-sm" placeholder="Search Pokemon..." onChange={event => setQuery(event.target.value)}
+                aria-describedby="inputGroup-sizing-sm" placeholder="Search Pokemon..." onChange={event => setQuery(event.target.value) }
                 />
             </InputGroup>
-            <br></br>
-            <br></br>
+          
             <br></br>
             <Container>
                 {chunks?.slice(0,3).map((chunk, idx) => (
@@ -110,7 +113,7 @@ export const SearchBar = ({items, location, showMore, setShowMore, cardColour}) 
                     </>
                 ))}
                 <br></br>
-                <Button type="button" variant="danger" onClick={() => setShowMore(true)} style={{visibility: !(showMore) ? 'visible' : 'hidden' , width: "30%"}} size="lg" >Load More   <img src={logoPoke} style={{width: "1.5rem"}}/></Button>
+                <Button type="button" variant="danger" onClick={() => setShowMore(true)} style={{visibility: !(showMore) ? 'visible' : 'hidden' , width: "30%", fontFamily: "'NCL Aekabih Muskey', sans-serif"}} size="lg" >Load More   <img src={logoPoke} style={{width: "1.5rem"}}/></Button>
                 <br></br>
             </Container>
             {/* <Container>

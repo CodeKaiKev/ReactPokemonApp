@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from "react";
 import Card from 'react-bootstrap/Card';
 import Placeholder from 'react-bootstrap/Placeholder';
+import '../SearchBar.css'
 function SearchPCardPara ({pokeUrl})  {
     const [pokemonSpecies, setPokemonSpecies] = useState();
     const [loaded, setLoaded] = useState(false);
@@ -40,7 +41,7 @@ function SearchPCardPara ({pokeUrl})  {
                 <> 
 
                  {loaded ? 
-                 <><Card.Text class="hide" style={{fontFamily: "initial", fontSize: "20px"}}>{flavor_text}</Card.Text> </> : 
+                 <><Card.Text class="hide" style={{fontFamily: "'NCL Aekabih Muskey', sans-serif", fontSize: "20px"}}>{flavor_text}</Card.Text> </> : 
                  <><Placeholder as={Card.Text} animation="glow">
                  <Placeholder xs={7} /> <Placeholder xs={4} /> <Placeholder xs={4} />{' '}
                  <Placeholder xs={6} /> <Placeholder xs={8} />

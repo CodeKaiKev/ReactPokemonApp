@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import '../SearchBar.css';
 import {
     MDBCard,
     MDBCardBody,
@@ -46,7 +47,7 @@ function SearchPCard2 ({pokemonUrl}) {
                 </a>
             </MDBRipple>
             <MDBCardBody>
-                <MDBCardTitle style={{fontFamily: "Fantasy", fontSize: "30px"}}>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1).toLowerCase()}</MDBCardTitle>
+                <MDBCardTitle style={{fontFamily: "'Pokemon Solid', sans-serif", fontSize: "30px", color: "gold"}}>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1).toLowerCase()}</MDBCardTitle>
                 <MDBCardText>
                 </MDBCardText>
             </MDBCardBody>

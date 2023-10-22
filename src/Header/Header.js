@@ -29,13 +29,13 @@ function Header ({setWhichPage, setBackG, setCardColour}) {
             >
               
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`} style={{fontFamily: "'Platinum Hub Caps', sans-serif"}}>
                   Pokemon Menu
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
                 <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link href="#action100"><Link to="/">Return Back</Link></Nav.Link>
+                  <Nav.Link href="#action100" style={{fontFamily: "'NCL Aekabih Muskey', sans-serif"}}><Link to="/">Return Back</Link></Nav.Link>
                   {/* <Nav.Link href="#action2">Link</Nav.Link> */}
                   {/* <Nav.Link href="#action12" onClick={() => setState('light')}>Light Mode</Nav.Link>
                   <Nav.Link href="#action12" onClick={() => setState('dark')}>Dark Mode</Nav.Link> */}

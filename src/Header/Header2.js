@@ -5,11 +5,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import Offcanvas from 'react-bootstrap/Offcanvas';
+import '../SearchBar.css'
 import './Header2.css';
 import { Routes, Route, Link } from 'react-router-dom';
 function Header2 ({setWhichPage, setBackG, setCardColour}) {
   return (
-    <div className="p-3  bg-danger text-white">
+    <div className="p-3  bg-danger text-white" >
       {[false].map((expand) => (
         <Navbar key={expand} expand={expand} >
           <Container fluid>
@@ -20,7 +21,7 @@ function Header2 ({setWhichPage, setBackG, setCardColour}) {
             </Container>
             <div class="expandThing">
             
-            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} placement="end" class="expandThing"/>
+            <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-${expand}`} placement="end" class="expandThing" />
             <Navbar.Offcanvas
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
@@ -29,17 +30,16 @@ function Header2 ({setWhichPage, setBackG, setCardColour}) {
             >
               
               <Offcanvas.Header closeButton>
-                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
+                <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`} style={{fontFamily: "'Platinum Hub Caps', sans-serif"}}>
                   Pokemon Menu
                 </Offcanvas.Title>
               </Offcanvas.Header>
               <Offcanvas.Body>
-                <Nav className="justify-content-end flex-grow-1 pe-3">
-                  <Nav.Link><Link to="/">Home</Link></Nav.Link>
+                <Nav className="justify-content-end flex-grow-1 pe-3" style={{fontFamily: "'NCL Aekabih Muskey', sans-serif"}}>
                   {/* <Nav.Link href="#action2">Link</Nav.Link> */}
-                  <NavDropdown
+                  <NavDropdown 
                     title="Pokemon Generations"
-                    id={`offcanvasNavbarDropdown-expand-${expand}`}
+                    id={`offcanvasNavbarDropdown-expand-${expand}` }
                   >
                     <NavDropdown.Item  onClick={() => {setWhichPage('Gen1'); setBackG(`https://archives.bulbagarden.net/media/upload/2/25/LGPE_Kanto_Map.png`)}}>Generation I - Kanto</NavDropdown.Item>
                     <NavDropdown.Divider />
