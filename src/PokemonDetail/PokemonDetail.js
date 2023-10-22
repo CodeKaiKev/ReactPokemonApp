@@ -99,7 +99,7 @@ const PokemonDetail = () => {
                 </Card.Body>
                 <Card bg="warning" text={cardColour[0]} style={{ marginLeft: "10%", marginRight: "10%",  paddingTop: "0.5rem", paddingBottom: "0.5rem"}}>
                         <Card.Title  style={{fontFamily: "'NCL Aekabih Muskey', sans-serif", fontSize: "1.4rem", padding: "0.3rem"}}>Abilities:</Card.Title>
-                        <Card bg="dark" text="light" style={{ marginLeft: "1rem", marginRight: "1rem", paddingBottom: "1rem",  paddingTop: "1rem", marginBottom: "1rem", fontFamily: "monospace"}}>
+                        <Card bg="dark" text="light" style={{ marginLeft: "1rem", marginRight: "1rem", paddingBottom: "1rem",  paddingTop: "1rem", marginBottom: "1rem", fontFamily: "'NCL Aekabih Muskey', sans-serif"}}>
                             
                             {pokemon.check.abilities.map((ability, idx) => 
                                     // setTotal(total + stat.base_stat)
@@ -111,13 +111,13 @@ const PokemonDetail = () => {
                 <br></br>
                 <Card bg="warning" text={cardColour[0]} style={{ marginLeft: "10%", marginRight: "10%",  paddingTop: "0.5rem", paddingBottom: "0.5rem"}}>
                         <Card.Title style={{fontFamily: "'NCL Aekabih Muskey', sans-serif", fontSize: "1.4rem", padding: "0.3rem"}}>Base Stats:</Card.Title>
-                        <Card bg="dark" text="light" style={{ marginLeft: "1rem", marginRight: "1rem", paddingBottom: "1rem",  paddingTop: "1rem", marginBottom: "1rem", fontFamily: "monospace"}}>
+                        <Card bg="dark" text="light" style={{ marginLeft: "1rem", marginRight: "1rem", paddingBottom: "1rem",  paddingTop: "1rem", marginBottom: "1rem", fontFamily: "'NCL Aekabih Muskey', sans-serif"}}>
                             
                             {pokemon.check.stats.map((stat, idx) => 
                                     // setTotal(total + stat.base_stat)
-                                    <Card.Text Key={idx}><strong>{stat.stat.name.charAt(0).toUpperCase() + stat.stat.name.slice(1).toLowerCase()}</strong>: {stat.base_stat}</Card.Text>
+                                    <Card.Text Key={idx}>{stat.stat.name.charAt(0).toUpperCase() + stat.stat.name.slice(1).toLowerCase()}: {stat.base_stat}</Card.Text>
                             )}
-                            <Card.Text><strong><u>Base Stat Total: {totalX} </u></strong></Card.Text>
+                            <Card.Text><u>Base Stat Total: {totalX} </u></Card.Text>
                         </Card>
                 </Card>
                 
