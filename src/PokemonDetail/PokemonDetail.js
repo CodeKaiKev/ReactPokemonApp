@@ -99,11 +99,11 @@ const PokemonDetail = () => {
                 </Card.Body>
                 <Card bg="warning" text={cardColour[0]} style={{ marginLeft: "10%", marginRight: "10%",  paddingTop: "0.5rem", paddingBottom: "0.5rem"}}>
                         <Card.Title  style={{fontFamily: "'NCL Aekabih Muskey', sans-serif", fontSize: "1.4rem", padding: "0.3rem"}}>Abilities:</Card.Title>
-                        <Card bg="dark" text="light" style={{ marginLeft: "1rem", marginRight: "1rem", paddingBottom: "1rem",  paddingTop: "1rem", marginBottom: "1rem", fontFamily: "'NCL Aekabih Muskey', sans-serif"}}>
+                        <Card bg="dark" text="light" style={{ marginLeft: "1rem", marginRight: "1rem", paddingBottom: "1rem",  paddingTop: "1rem", marginBottom: "1rem", fontFamily: "'NCL Aekabih Muskey', sans-serif", fontSize: "120%"}}>
                             
                             {pokemon.check.abilities.map((ability, idx) => 
                                     // setTotal(total + stat.base_stat)
-                                    <Card.Text Key={idx}><strong>{ability.ability.name.charAt(0).toUpperCase() + ability.ability.name.slice(1).toLowerCase()}:</strong> <PokeAbility pokeUrl={ability.ability.url}/></Card.Text>
+                                    <Card.Text Key={idx}>{ability.ability.name.charAt(0).toUpperCase() + ability.ability.name.slice(1).toLowerCase()}: <PokeAbility pokeUrl={ability.ability.url}/></Card.Text>
                             )}
                            
                         </Card>
@@ -111,7 +111,7 @@ const PokemonDetail = () => {
                 <br></br>
                 <Card bg="warning" text={cardColour[0]} style={{ marginLeft: "10%", marginRight: "10%",  paddingTop: "0.5rem", paddingBottom: "0.5rem"}}>
                         <Card.Title style={{fontFamily: "'NCL Aekabih Muskey', sans-serif", fontSize: "1.4rem", padding: "0.3rem"}}>Base Stats:</Card.Title>
-                        <Card bg="dark" text="light" style={{ marginLeft: "1rem", marginRight: "1rem", paddingBottom: "1rem",  paddingTop: "1rem", marginBottom: "1rem", fontFamily: "'NCL Aekabih Muskey', sans-serif"}}>
+                        <Card bg="dark" text="light" style={{ marginLeft: "1rem", marginRight: "1rem", paddingBottom: "1rem",  paddingTop: "1rem", marginBottom: "1rem", fontFamily: "'NCL Aekabih Muskey', sans-serif", fontSize: "120%"}}>
                             
                             {pokemon.check.stats.map((stat, idx) => 
                                     // setTotal(total + stat.base_stat)
