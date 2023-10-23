@@ -31,7 +31,7 @@ const PokemonDetail = () => {
     return (
         <>
             <Header setWhichPage={setWhichPage} setBackG={setBackG} setCardColour={setCardColour}/>
-            <div >
+            <div style={{backgroundColor: "#212529"}}>
                 {/* <h1 style={{textAlign: "center"}}>#{pokemon.check.order} {pokemon.check.name.slice(1).toLowerCase()}</h1> */}
                 <Card className="text-center" bg={cardColour[0]} text={cardColour[2]} style={{paddingBottom: "0rem",paddingTop: "1rem", marginLeft: "1px", marginRight: "1px"}}>
                 
