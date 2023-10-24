@@ -41,7 +41,7 @@ const PokemonDetail = () => {
         ground: "#CC9F4F",
         ice: "#70CBD4",
         normal: "#AAB09F",
-        pyschic: "#E5709B",
+        psychic: "#E5709B",
         rock: "#B2A061",
         steel: "#89A1B0",
         water: "#539AE2"
@@ -59,7 +59,7 @@ const PokemonDetail = () => {
                 <Card.Header style={{fontFamily: "'Pokemon Solid', sans-serif", color: "gold"}}><h1>#{pokemon.check.id} {pokemon.check.name.charAt(0).toUpperCase() + pokemon.check.name.slice(1).toLowerCase()}</h1></Card.Header>
                 <Card.Body>
                     {/* <Card.Title style={{fontFamily: "'Pokemon Hollow', sans-serif", color: "white"}}>Type: {(pokemon.check.types).length == 1 ? pokemon.check.types[0].type.name.charAt(0).toUpperCase() + pokemon.check.types[0].type.name.slice(1).toLowerCase() :pokemon.check.types[0].type.name.charAt(0).toUpperCase() + pokemon.check.types[0].type.name.slice(1).toLowerCase()   + ' / ' + pokemon.check.types[1].type.name.charAt(0).toUpperCase() + pokemon.check.types[1].type.name.slice(1).toLowerCase()}</Card.Title> */}
-                    <Card.Title style={{fontFamily: "'Pokemon Hollow', sans-serif", display: "inline-block"}}>{(pokemon.check.types).length == 1 ? <><h2>Type: </h2><h3 style={{color: pokeColours[pokemon.check.types[0].type.name], fontFamily: "'Pokemon Solid', sans-serif"}}>{pokemon.check.types[0].type.name.charAt(0).toUpperCase() + pokemon.check.types[0].type.name.slice(1).toLowerCase()}</h3></>:<><h2>Type: </h2><h3 style={{color: pokeColours[pokemon.check.types[0].type.name], fontFamily: "'Pokemon Solid', sans-serif"}}>{pokemon.check.types[0].type.name.charAt(0).toUpperCase() + pokemon.check.types[0].type.name.slice(1).toLowerCase()}</h3><h3 style={{color: pokeColours[pokemon.check.types[1].type.name], fontFamily: "'Pokemon Solid', sans-serif"}}>{pokemon.check.types[1].type.name.charAt(0).toUpperCase() + pokemon.check.types[1].type.name.slice(1).toLowerCase()}</h3></> }</Card.Title>
+                    <Card.Title style={{fontFamily: "'Pokemon Hollow', sans-serif", display: "inline-block"}}>{(pokemon.check.types).length == 1 ? <><h2>Type: </h2><h3 style={{color: pokeColours[pokemon.check.types[0].type.name], fontFamily: "'Pokemon Solid', sans-serif"}}>{pokemon.check.types[0].type.name.charAt(0).toUpperCase() + pokemon.check.types[0].type.name.slice(1).toLowerCase()}</h3></>:<><h2>Type: </h2><h3 style={{color: pokeColours[pokemon.check.types[0].type.name], fontFamily: "'Pokemon Solid', sans-serif", float: "left"}}>{pokemon.check.types[0].type.name.charAt(0).toUpperCase() + pokemon.check.types[0].type.name.slice(1).toLowerCase()}</h3> &nbsp;  <h3 style={{color: pokeColours[pokemon.check.types[1].type.name], fontFamily: "'Pokemon Solid', sans-serif", float: "right"}}>{pokemon.check.types[1].type.name.charAt(0).toUpperCase() + pokemon.check.types[1].type.name.slice(1).toLowerCase()}</h3></> }</Card.Title>
                     <Carousel data-bs-theme="light">
                     <Carousel.Item>
                         <img

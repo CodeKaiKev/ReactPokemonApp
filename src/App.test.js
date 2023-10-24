@@ -3,6 +3,8 @@ import App from './App';
 
 test('renders learn react link', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const GenerationHeader = screen.getByText(/Kanto Pokedex/i);
+  expect(GenerationHeader).toBeInTheDocument();
+  const menuButton = screen.getByLabelText("Toggle navigation");
+  expect(menuButton).toBeInTheDocument();
 });
