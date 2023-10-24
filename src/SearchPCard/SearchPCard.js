@@ -91,7 +91,7 @@ function SearchPCard ({pokemonUrl, cardColour}) {
             
             <div className="d-flex justify-content-around">
             <Card class="card" style={{ width: '18rem'}} onMouseEnter={(e) => onHover(e)} onMouseLeave={(e) => onHoverOver(e)} bg={cardColour[0]} border={cardColour[1]} text={cardColour[2]}>
-                {loaded ? <Card.Img variant="top" src={pokemon.sprites.front_default} /> : <Card.Img variant="top" src="holder.js/100px180" />}
+                {loaded ? <Card.Img variant="top" src={pokemon.sprites.front_default} style={{imageRendering: "pixelated"}}/> : <Card.Img variant="top" src="holder.js/100px180" />}
                 <Card.Body>
                 <Card.Title style={{ fontFamily: "'Pokemon Solid', sans-serif", fontSize: "30px", color: "gold" }}>{pokemon.name.charAt(0).toUpperCase() + pokemon.name.slice(1).toLowerCase()}</Card.Title>
                 <br></br>

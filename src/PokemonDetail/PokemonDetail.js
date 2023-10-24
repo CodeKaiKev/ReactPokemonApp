@@ -25,6 +25,27 @@ const PokemonDetail = () => {
             //console.log(totalX);
         }
     }
+    const pokeColours = {
+        fire : "#EA7A3C",
+        water: "#539AE2",
+        grass: "#71C558",
+        flying: "#7DA6DE",
+        poison: "#B468B7",
+        fighting: "#CB5F48",
+        bug: "#94BC4A",
+        dark: "#736C75",
+        dragon: "#6A7BAF",
+        electric: "#E5C531",
+        fairy: "#E397D1",
+        ghost: "#846AB6",
+        ground: "#CC9F4F",
+        ice: "#70CBD4",
+        normal: "#AAB09F",
+        pyschic: "#E5709B",
+        rock: "#B2A061",
+        steel: "#89A1B0",
+        water: "#539AE2"
+    }
     
     //console.log(location);
     //console.log(pokemon);
@@ -37,11 +58,12 @@ const PokemonDetail = () => {
                 
                 <Card.Header style={{fontFamily: "'Pokemon Solid', sans-serif", color: "gold"}}><h1>#{pokemon.check.id} {pokemon.check.name.charAt(0).toUpperCase() + pokemon.check.name.slice(1).toLowerCase()}</h1></Card.Header>
                 <Card.Body>
-                    <Card.Title style={{fontFamily: "'Pokemon Hollow', sans-serif", color: "white"}}>Type: {(pokemon.check.types).length == 1 ? pokemon.check.types[0].type.name.charAt(0).toUpperCase() + pokemon.check.types[0].type.name.slice(1).toLowerCase() :pokemon.check.types[0].type.name.charAt(0).toUpperCase() + pokemon.check.types[0].type.name.slice(1).toLowerCase()   + ' / ' + pokemon.check.types[1].type.name.charAt(0).toUpperCase() + pokemon.check.types[1].type.name.slice(1).toLowerCase()}</Card.Title>
+                    {/* <Card.Title style={{fontFamily: "'Pokemon Hollow', sans-serif", color: "white"}}>Type: {(pokemon.check.types).length == 1 ? pokemon.check.types[0].type.name.charAt(0).toUpperCase() + pokemon.check.types[0].type.name.slice(1).toLowerCase() :pokemon.check.types[0].type.name.charAt(0).toUpperCase() + pokemon.check.types[0].type.name.slice(1).toLowerCase()   + ' / ' + pokemon.check.types[1].type.name.charAt(0).toUpperCase() + pokemon.check.types[1].type.name.slice(1).toLowerCase()}</Card.Title> */}
+                    <Card.Title style={{fontFamily: "'Pokemon Hollow', sans-serif", display: "inline-block"}}>{(pokemon.check.types).length == 1 ? <><h2>Type: </h2><h3 style={{color: pokeColours[pokemon.check.types[0].type.name], fontFamily: "'Pokemon Solid', sans-serif"}}>{pokemon.check.types[0].type.name.charAt(0).toUpperCase() + pokemon.check.types[0].type.name.slice(1).toLowerCase()}</h3></>:<><h2>Type: </h2><h3 style={{color: pokeColours[pokemon.check.types[0].type.name], fontFamily: "'Pokemon Solid', sans-serif"}}>{pokemon.check.types[0].type.name.charAt(0).toUpperCase() + pokemon.check.types[0].type.name.slice(1).toLowerCase()}</h3><h3 style={{color: pokeColours[pokemon.check.types[1].type.name], fontFamily: "'Pokemon Solid', sans-serif"}}>{pokemon.check.types[1].type.name.charAt(0).toUpperCase() + pokemon.check.types[1].type.name.slice(1).toLowerCase()}</h3></> }</Card.Title>
                     <Carousel data-bs-theme="light">
                     <Carousel.Item>
                         <img
-                        style={{width: "20rem"}}
+                        style={{width: "20rem", imageRendering: "pixelated"}}
                         src={pokemon.check.sprites.front_default}
                         alt="First slide"
                         />
@@ -52,7 +74,7 @@ const PokemonDetail = () => {
                     </Carousel.Item>
                     <Carousel.Item>
                         <img
-                        style={{width: "20rem"}}
+                        style={{width: "20rem", imageRendering: "pixelated"}}
                         src={pokemon.check.sprites.back_default}
                         alt="Second slide"
                         />
@@ -66,7 +88,7 @@ const PokemonDetail = () => {
                         // className="d-block w-100"
                         src={pokemon.check.sprites.front_shiny}
                         alt="Third slide"
-                        style={{width: "20rem"}}
+                        style={{width: "20rem", imageRendering: "pixelated"}}
                         />
                         {/* <Carousel.Caption>
                         <h5>Third slide label</h5>
@@ -80,7 +102,7 @@ const PokemonDetail = () => {
                         // className="d-block w-100"
                         src={pokemon.check.sprites.back_shiny}
                         alt="Third slide"
-                        style={{width: "20rem"}}
+                        style={{width: "20rem", imageRendering: "pixelated"}}
                         />
                         {/* <Carousel.Caption>
                         <h5>Third slide label</h5>
@@ -97,7 +119,7 @@ const PokemonDetail = () => {
                     <br/>
                     {/* <Button variant="warning"><Link to="/">Return Back</Link></Button> */}
                 </Card.Body>
-                <Card bg="warning" text={cardColour[0]} style={{ marginLeft: "10%", marginRight: "10%",  paddingTop: "0.5rem", paddingBottom: "0.5rem"}}>
+                <Card  text={cardColour[0]} style={{ marginLeft: "10%", marginRight: "10%",  paddingTop: "0.5rem", paddingBottom: "0.5rem", backgroundColor: pokeColours[pokemon.check.types[0].type.name]}}>
                         <Card.Title  style={{fontFamily: "'NCL Aekabih Muskey', sans-serif", fontSize: "1.4rem", padding: "0.3rem"}}>Abilities:</Card.Title>
                         <Card bg="dark" text="light" style={{ marginLeft: "1rem", marginRight: "1rem", paddingBottom: "1rem",  paddingTop: "1rem", marginBottom: "1rem", fontFamily: "'NCL Aekabih Muskey', sans-serif", fontSize: "120%"}}>
                             
@@ -109,7 +131,7 @@ const PokemonDetail = () => {
                         </Card>
                 </Card>
                 <br></br>
-                <Card bg="warning" text={cardColour[0]} style={{ marginLeft: "10%", marginRight: "10%",  paddingTop: "0.5rem", paddingBottom: "0.5rem"}}>
+                <Card  text={cardColour[0]} style={{ marginLeft: "10%", marginRight: "10%",  paddingTop: "0.5rem", paddingBottom: "0.5rem", backgroundColor: pokeColours[pokemon.check.types[0].type.name]}}>
                         <Card.Title style={{fontFamily: "'NCL Aekabih Muskey', sans-serif", fontSize: "1.4rem", padding: "0.3rem"}}>Base Stats:</Card.Title>
                         <Card bg="dark" text="light" style={{ marginLeft: "1rem", marginRight: "1rem", paddingBottom: "1rem",  paddingTop: "1rem", marginBottom: "1rem", fontFamily: "'NCL Aekabih Muskey', sans-serif", fontSize: "120%"}}>
                             

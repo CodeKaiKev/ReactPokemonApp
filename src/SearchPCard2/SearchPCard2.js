@@ -34,7 +34,7 @@ function SearchPCard2 ({pokemonUrl}) {
         {loaded ? 
         <>
             <MDBCard>
-            <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay' >
+            <MDBRipple rippleColor='light' rippleTag='div' className='bg-image hover-overlay' style={{imageRendering: "pixelated"}}>
                 <MDBCardImage src={pokemon.sprites.front_default} fluid alt='...' />
                 <MDBCardImage src={pokemon.sprites.back_default} fluid alt='...' />
                 <a>
